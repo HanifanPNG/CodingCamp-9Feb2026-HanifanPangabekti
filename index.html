@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- hero -->
+    <div
+      class="relative w-full min-h-screen bg-cover bg-center"
+      style="background-image: url(&quot;./src/img/company.jpg&quot;)"
+      id="home"
+    >
+      <!-- navbar -->
+      <header class="absolute w-[80%] mx-auto top-5 left-1/2 -translate-x-1/2">
+        <nav
+          class="flex justify-between items-center py-3 px-5 bg-amber-500 rounded-full"
+        >
+          <div>logo</div>
+          <div class="flex flex-row gap-8">
+            <a href="#home">Home</a>
+            <a href="#profile">Our Profile</a>
+            <a href="#message">Contact</a>
+          </div>
+        </nav>
+      </header>
+      <!-- name user -->
+      <div
+        class="flex justify-start items-center min-h-screen px-20 text-white"
+      >
+        <div class="max-w-2xl text-left">
+          <h1 id="welcomeText" class="text-4xl font-bold mb-3">
+            
+          </h1>
+          <p class="max-w-xl">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Consequuntur architecto ipsum ducimus! Laboriosam quibusdam
+            voluptatem dolorum, voluptatum doloremque quidem itaque?
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- OUR PROFILE -->
+    <section class="py-16 bg-white mx-10" id="profile">
+      <div class="w-[85%] mx-auto">
+        <!-- About & Image -->
+        <div class="flex flex-row items-center justify-between gap-10 ">
+          <!-- About -->
+          <div class="w-1/2">
+            <h3 class="text-3xl mb-4 font-bold">About Our Company</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We are a digital company focused on delivering high quality
+              solutions for modern businesses. Our team combines creativity and
+              technology to help brands grow faster and stronger in the digital
+              era.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Founded in 2020, we have helped many clients transform their ideas
+              into impactful digital products.
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class="w-1/2">
+            <img
+              src="./src/img/company.jpg"
+              class="rounded-xl shadow-md w-full h-100 object-cover hover:shadow-xl transition-shadow"
+              alt="company"
+            />
+          </div>
+        </div>
+        <!-- vision and mision -->
+        <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="p-8 bg-amber-50 border-l-4 border-amber-500 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-2 bg-amber-500 rounded-lg text-white mr-4">
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-2xl font-bold text-slate-800">Our Vision</h4>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              To be the leading global partner in digital transformation,
+              empowering businesses through sustainable innovation and
+              cutting-edge technology solutions.
+            </p>
+          </div>
+
+          <div
+            class="p-8 bg-slate-50 border-l-4 border-slate-800 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-2 bg-slate-800 rounded-lg text-white mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-2xl font-bold text-slate-800">Our Mission</h4>
+            </div>
+            <ul class="text-gray-600 space-y-2 list-disc list-inside">
+              <li>
+                Delivering high-quality digital products tailored to client
+                needs.
+              </li>
+              <li>
+                Fostering a culture of creativity and continuous learning.
+              </li>
+              <li>
+                Bridging the gap between complex technology and user experience.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+   <section id="message" class="py-20 bg-slate-50">
+  <div class="w-[85%] mx-auto bg-white p-10 rounded-2xl shadow-lg transition-all duration-500">
+    <h2 class="text-4xl font-bold mb-10 text-center">Message Us</h2>
+
+    <div class="flex flex-col md:flex-row gap-12 justify-center">
+      <div id="formContainer" class="w-full max-w-2xl mx-auto md:mx-0 transition-all duration-700 ease-in-out">
+        <form id="messageForm" class="space-y-5">
+          <div class="grid grid-cols-[120px_1fr] items-center gap-2">
+            <label class="font-medium text-gray-700">Nama</label>
+            <input type="text" id="inputNama" placeholder="Nama" class="border p-2 rounded w-full focus:ring-2 focus:ring-amber-500 outline-none" required>
+          </div>
+
+          <div class="grid grid-cols-[120px_1fr] items-center gap-2">
+            <label class="font-medium text-gray-700">Tanggal Lahir</label>
+            <input type="date" id="inputTgl" class="border p-2 rounded w-full focus:ring-2 focus:ring-amber-500 outline-none" required>
+          </div>
+
+          <div class="grid grid-cols-[120px_1fr] items-center gap-2">
+            <label class="font-medium text-gray-700">Jenis Kelamin</label>
+            <div class="flex gap-4">
+              <label class="flex items-center gap-1 cursor-pointer">
+                <input type="radio" name="gender" value="Laki-Laki" checked> Laki-Laki
+              </label>
+              <label class="flex items-center gap-1 cursor-pointer">
+                <input type="radio" name="gender" value="Perempuan"> Perempuan
+              </label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-[120px_1fr] items-start gap-2">
+            <label class="font-medium text-gray-700 mt-2">Pesan</label>
+            <textarea id="inputPesan" rows="4" placeholder="Pesan" class="border p-2 rounded w-full focus:ring-2 focus:ring-amber-500 outline-none" required></textarea>
+          </div>
+
+          <div class="grid grid-cols-[120px_1fr] gap-2">
+            <div></div>
+            <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-all active:scale-95 w-full">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="outputWrapper" class="w-full md:w-1/2 hidden opacity-0 transition-all duration-700 ease-in-out">
+        <div id="outputContainer" class="h-full border-2 border-amber-100 rounded-xl p-6 bg-amber-50/30">
+          <p class="text-sm text-amber-600 font-mono mb-4" id="currentTime"></p>
+          <div class="space-y-3 text-slate-800">
+            <p class="border-b border-gray-100 pb-1"><strong>Nama :</strong> <span id="resNama"></span></p>
+            <p class="border-b border-gray-100 pb-1"><strong>Tanggal Lahir :</strong> <span id="resTgl"></span></p>
+            <p class="border-b border-gray-100 pb-1"><strong>Jenis Kelamin :</strong> <span id="resGender"></span></p>
+            <p class="font-bold">Pesan :</p>
+            <div id="resPesan" class="bg-white p-4 rounded-lg border border-gray-200 italic text-gray-600 min-h-[100px]"></div>
+          </div>
+          <!-- delete -->
+           <button id="btnDelete" class=" bg-red-500 hover:bg-red-600 text-white font-semibold p-3 rounded-lg transition-colors flex items-center justify-center gap-2 mt-4">
+              Close
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-6 text-center text-gray-500 text-sm border-t">
+    Created By Hanifan
+</footer>
+
+<script src="js/script.js"></script>
+  </body>
+</html>
