@@ -18,7 +18,7 @@ const btnDelete = document.getElementById('btnDelete');
 const welcomeHeading = document.getElementById('welcomeText');
 
 const name = "Hanifan";
-welcomeHeading.innerHTML = `Hii ${name}, Welcome to Our company`;
+welcomeHeading.innerHTML = `Hii ${name}, Welcome to <br>Our company`;
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -60,5 +60,21 @@ btnDelete.addEventListener('click', function () {
 
         form.reset();
     }, 700);
+});
+
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.toggle('flex');
+});
+
+const navLinks = mobileMenu.querySelectorAll('a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('flex');
+  });
 });
 
