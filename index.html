@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- hero -->
@@ -85,8 +86,8 @@
         class="flex justify-start items-center min-h-screen px-20 text-white"
       >
         <div class="max-w-2xl text-left">
-          <h1 id="welcomeText" class="text-4xl font-bold mb-3"></h1>
-          <p class="max-w-xl">
+          <h1 id="welcomeText" class="text-4xl font-bold mb-3"  data-aos="fade-right" data-aos-duration="1500"></h1>
+          <p class="max-w-xl" data-aos="fade-right" data-aos-duration="2000">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur architecto ipsum ducimus! Laboriosam quibusdam
             voluptatem dolorum, voluptatum doloremque quidem itaque?
@@ -103,14 +104,14 @@
         >
           <!-- About -->
           <div class="md:w-1/2">
-            <h3 class="text-3xl mb-4 font-bold">About Our Company</h3>
-            <p class="text-gray-600 leading-relaxed mb-4">
+            <h3 class="text-3xl mb-4 font-bold" data-aos="fade-up" data-aos-duration="1000">About Our Company</h3>
+            <p class="text-gray-600 leading-relaxed mb-4" data-aos="fade-right" data-aos-duration="1500">
               We are a digital company focused on delivering high quality
               solutions for modern businesses. Our team combines creativity and
               technology to help brands grow faster and stronger in the digital
               era.
             </p>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="text-gray-600 leading-relaxed" data-aos="fade-right" data-aos-duration="1500">
               Founded in 2020, we have helped many clients transform their ideas
               into impactful digital products.
             </p>
@@ -120,7 +121,7 @@
           <div class="md:w-1/2">
             <img
               src="./src/img/company2.jpg"
-              class="rounded-xl shadow-md w-full h-100 object-cover hover:shadow-xl transition-shadow"
+              class="rounded-xl shadow-md w-full h-100 object-cover hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-duration="1000"
               alt="company"
             />
           </div>
@@ -129,6 +130,7 @@
         <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div
             class="p-8 bg-amber-50 border-l-4 border-amber-500 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            data-aos="zoom-in-right" data-aos-duration="1500"
           >
             <div class="flex items-center mb-4">
               <div class="p-2 bg-amber-500 rounded-lg text-white mr-4">
@@ -158,8 +160,9 @@
 
           <div
             class="p-8 bg-slate-50 border-l-4 border-slate-800 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            data-aos="zoom-in-left" data-aos-duration="1500"
           >
-            <div class="flex items-center mb-4">
+            <div class="flex items-center mb-4" >
               <div class="p-2 bg-slate-800 rounded-lg text-white mr-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -195,20 +198,21 @@
       </div>
     </section>
     <!-- contact -->
-    <section id="message" class="py-20 bg-slate-50">
+    <section id="message" class="py-12 md:py-20 bg-slate-50">
       <div
         class="w-[95%] md:w-[85%] mx-auto bg-white p-6 md:p-10 rounded-2xl shadow-lg transition-all duration-500"
+        data-aos="zoom-in" data-aos-duration="500"
       >
-        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-10 text-center">
           Message Us
         </h2>
 
-        <div class="flex flex-col lg:flex-row gap-12 justify-center">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center">
           <div
             id="formContainer"
             class="w-full max-w-2xl transition-all duration-700 ease-in-out"
           >
-            <form id="messageForm" class="space-y-5">
+            <form id="messageForm" class="space-y-6">
               <div
                 class="flex flex-col md:grid md:grid-cols-[120px_1fr] md:items-center gap-2"
               >
@@ -216,8 +220,8 @@
                 <input
                   type="text"
                   id="inputNama"
-                  placeholder="Nama"
-                  class="border p-2.5 rounded-lg w-full focus:ring-2 focus:ring-amber-500 outline-none"
+                  placeholder="Nama Lengkap"
+                  class="border p-2.5 rounded-lg w-full focus:ring-2 focus:ring-amber-500 outline-none transition-all"
                   required
                 />
               </div>
@@ -238,8 +242,8 @@
                 class="flex flex-col md:grid md:grid-cols-[120px_1fr] md:items-center gap-2"
               >
                 <label class="font-medium text-gray-700">Jenis Kelamin</label>
-                <div class="flex gap-6 mt-1 md:mt-0">
-                  <label class="flex items-center gap-2 cursor-pointer">
+                <div class="flex gap-6 py-1">
+                  <label class="flex items-center gap-2 cursor-pointer group">
                     <input
                       type="radio"
                       name="gender"
@@ -247,16 +251,20 @@
                       class="w-4 h-4 accent-amber-500"
                       checked
                     />
-                    Laki-Laki
+                    <span class="group-hover:text-amber-600 transition-colors"
+                      >Laki-Laki</span
+                    >
                   </label>
-                  <label class="flex items-center gap-2 cursor-pointer">
+                  <label class="flex items-center gap-2 cursor-pointer group">
                     <input
                       type="radio"
                       name="gender"
                       value="Perempuan"
                       class="w-4 h-4 accent-amber-500"
                     />
-                    Perempuan
+                    <span class="group-hover:text-amber-600 transition-colors"
+                      >Perempuan</span
+                    >
                   </label>
                 </div>
               </div>
@@ -268,8 +276,8 @@
                 <textarea
                   id="inputPesan"
                   rows="4"
-                  placeholder="Tulis pesan Anda..."
-                  class="border p-2.5 rounded-lg w-full focus:ring-2 focus:ring-amber-500 outline-none"
+                  placeholder="Tulis pesan Anda di sini..."
+                  class="border p-2.5 rounded-lg w-full focus:ring-2 focus:ring-amber-500 outline-none transition-all"
                   required
                 ></textarea>
               </div>
@@ -278,7 +286,7 @@
                 <div class="hidden md:block"></div>
                 <button
                   type="submit"
-                  class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-xl transition-all active:scale-95 w-full shadow-md shadow-amber-200"
+                  class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3.5 px-6 rounded-xl transition-all active:scale-[0.98] w-full shadow-md shadow-amber-200"
                 >
                   Submit Message
                 </button>
@@ -289,7 +297,67 @@
           <div
             id="outputWrapper"
             class="w-full lg:w-1/2 hidden opacity-0 transition-all duration-700 ease-in-out"
-          ></div>
+          >
+            <div
+              id="outputContainer"
+              class="h-full border-2 border-amber-100 rounded-2xl p-6 bg-amber-50/30 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex justify-between items-center mb-6">
+                  <h3
+                    class="font-bold text-amber-800 uppercase tracking-wider text-sm"
+                  >
+                    Review Message
+                  </h3>
+                  <p
+                    class="text-[10px] text-amber-600 font-mono"
+                    id="currentTime"
+                  ></p>
+                </div>
+
+                <div class="space-y-4 text-slate-800">
+                  <div class="bg-white/50 p-3 rounded-lg border border-white">
+                    <p class="text-xs text-gray-500 uppercase font-bold">
+                      Nama
+                    </p>
+                    <p id="resNama" class="font-semibold"></p>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/50 p-3 rounded-lg border border-white">
+                      <p class="text-xs text-gray-500 uppercase font-bold">
+                        Tanggal Lahir
+                      </p>
+                      <p id="resTgl" class="font-semibold text-sm"></p>
+                    </div>
+                    <div class="bg-white/50 p-3 rounded-lg border border-white">
+                      <p class="text-xs text-gray-500 uppercase font-bold">
+                        Gender
+                      </p>
+                      <p id="resGender" class="font-semibold text-sm"></p>
+                    </div>
+                  </div>
+
+                  <div class="bg-white/50 p-3 rounded-lg border border-white">
+                    <p class="text-xs text-gray-500 uppercase font-bold mb-1">
+                      Isi Pesan
+                    </p>
+                    <div
+                      id="resPesan"
+                      class="italic text-gray-600 text-sm leading-relaxed whitespace-pre-line"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="btnDelete"
+                class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-xl transition-all mt-6 shadow-lg shadow-red-100 flex items-center justify-center gap-2"
+              >
+                close
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -299,5 +367,9 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
